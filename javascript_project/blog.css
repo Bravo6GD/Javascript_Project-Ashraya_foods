@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    overflow: hidden;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    background: whitesmoke;
+}
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    background-color: black;
+}
+.photo{
+    width: 30vw;
+    position: relative;
+    left: 65vw;
+    top: 15vh;
+    border-radius: 25vh;
+}
+
+.main_text{
+    color: rgb(210, 62, 62);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 5;
+    font-size: 6vw;
+    position: relative;
+    top: -40vh;
+    left: 5vw;
+}
+.about_text{
+    width: 60vw;
+    position: relative;
+    top: -39vh;
+    left: 5vw;
+    font-family: agency fb;
+    font-size: 3vw;
+}
+.author{
+    color: rgb(210, 62, 62);
+    width: 60vw;
+    position: relative;
+    top: -39vh;
+    left: 47vw;
+    font-family: agency fb;
+    font-size: 3vw;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7
+.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="contactus.css">
+
+    <title>Contact us | Ashraya Foods </title>
+</head>
+<body>
+    <div class="container">
+        <p class="login-text">Contact Us</p>
+        <form class="login-email" onsubmit="sendemail(); reset(); return false;">
+            <div class="input-group">
+                <input type="text" placeholder="Name" id="name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="Email" id="email" required>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="Type your Message" id="message" required>
+            </div>
+            <div class="input-group">
+                <button class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendemail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "ashraya.foods@gmail.com",
+                Password : "ashrayafoods123",
+                To : "ashraya.foods@gmail.com",
+                From : document.getElementById("email").value ,
+                Subject : "Clients Inquiry",
+                Body : "Name:"+document.getElementById("name").value
+                    +"<br> Email:"+document.getElementById("email").value
+                    +"<br> Message:"+document.getElementById("message").value
+            }).then(
+            message => alert("message sent sucessfully")
+            );
+        }
+    </script>
+</body>
+</html>
